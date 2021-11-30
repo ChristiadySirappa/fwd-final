@@ -1,0 +1,355 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+h1,h1,h3,h4,h5,h6,p{
+  font-family: 'Space Mono',monospace;
+  color: #fff;
+}
+
+/* main container style */
+.main-app{
+  height:100vh;
+  width:100vw;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+
+}
+
+/* main app change background color */
+.dark{
+  background-color:#141D2F;
+}
+.light{
+  background-color:#F6F8FF;
+}
+
+
+.user-informations,
+form{
+  background: #1E2A47;
+}
+
+.lightBg{
+  background: #fff;
+  box-shadow: 2px 7px 5px 1px #aeaeae;
+}
+
+/* form styles here */
+form{
+  height:70px;
+  width:800px;
+  border: none;
+  border-radius:14px;
+
+  margin-top:28px;
+  padding:10px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:all 500ms ease-in-out;
+
+}
+
+form>div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:width 500ms ease-in-out;
+
+}
+
+form>div>input{
+  height:40px;
+  width:600px;
+  margin-left:5px;
+  background: none;
+  border:none;
+  outline:none;
+  color: #fff;
+  font-size:1.25rem;
+  letter-spacing: 1px;
+  transition:width 500ms ease-in-out;
+}
+
+form>div>input::placeholder{
+  color:#eee;
+}
+
+form>div>input.lightText,
+form>div>input.lightText::placeholder{
+  color:#4B6A9B;
+}
+
+.color-change{
+  background: none;
+}
+.color-change:hover{
+  background: none;
+}
+
+button{
+  height:50px;
+  width:100px;
+  background:#0079ff;
+  color: #fff;
+  font-weight:700;
+  font-size:1rem;
+  border:none;
+  border-radius:10px;
+  transition:width 500ms ease-in-out;
+}
+
+button:hover{
+  background: #9699f7;
+  cursor: pointer;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction:row;
+  width:800px;
+  transition:width 500ms ease-in-out;
+}
+
+.header>div>p{
+  height:30px;
+  width:50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight:bolder;
+}
+
+.light-text{
+  color:#fff;
+}
+.dark-text{
+  color:#1E2A4b;
+}
+
+/* users informations container styles */
+.user-informations{
+  position:relative;
+  width: 800px;
+  height: 430px;
+  margin-top:20px;
+  padding:40px;
+  border-radius:15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row-reverse;
+}
+
+.users-header-section{
+  min-height:160px;
+  width:570px;
+}
+
+.users-header-section>p:nth-of-type(1){
+  margin-bottom:20px;
+  color:#88f;
+}
+.users-header-section>p:nth-of-type(2){
+  margin-bottom:5px;
+  color:#bbb;
+}
+
+.header-section-one{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+/* user status style */
+.user-status{
+  background: #141D2F;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  padding:15px 0;
+  width:570px;
+  border-radius:10px;
+}
+
+.user-status>div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.user-status>div>p{
+  color:#ddd;
+}
+
+/* statistics information style */
+
+.stat-cont{
+  height:60px;
+  width:570px;
+  margin-top:25px;
+  display:grid;
+  grid-template-columns: repeat(2,250px);
+  grid-template-rows: repeat(2,50px);
+  grid-column-gap: 60px;
+}
+
+.stat-item-cont{
+  display: flex;
+  align-items: center;
+  width:100%;
+}
+
+.stat-item-cont>p{
+  margin-left:10px;
+  color:#ababab;
+}
+
+.stat-item-cont>p.darkClr{
+  color:#4a4a4a;
+}
+
+/* screen width 768px */
+@media screen and (max-width:768px){
+  .main-app{
+    min-height:100vh;
+    justify-content: flex-start;
+    padding-top:40px;
+  }
+  form{
+    width:350px;
+    margin-top:24px;
+    padding:10px 20px;
+    transition:width 500ms ease-in-out;
+  }
+  form>div>input{
+    width:190px;
+    font-size:0.875rem;
+    transition:width 500ms ease-in-out;
+  }
+  button{
+    height:40px;
+    width:75px;
+    font-size:0.875rem;
+    transition:width 500ms ease-in-out;
+
+  }
+  .header{
+    width:350px;
+    transition:width 500ms ease-in-out;
+  }
+  .header>h1{
+    font-size:1.4375rem;
+    font-weight:bolder;
+  }
+  .header>div>p{
+    font-size:0.75rem;
+  }
+
+  .user-informations{
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction:row-reverse;
+    transition:width 350ms ease-in-out;
+  }
+  .user-informations>div{
+    width:100%;
+    position:relative;
+    transition:width 350ms ease-in-out;
+  }
+
+  .users-header-section{
+    min-height:220px;
+    width:100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20px;
+    position:relative;
+    transition:width 350ms ease-in-out, flex-direction 350ms ease-in-out;
+  }
+  .users-header-section>div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-section-one{
+    align-items:flex-start;
+    justify-content: space-between;
+  }
+
+
+  .header-section-one>h1{
+    font-size:1rem;
+    text-transform:capitalize;
+    margin-bottom: 7px;
+  }
+  .header-section-one>p{
+    font-size:0.75rem;
+    margin-bottom: 4px;
+  }
+
+  .users-header-section>p:nth-of-type(1){
+    margin-bottom:20px;
+    font-size:0.875rem;
+  }
+  .users-header-section>p:nth-of-type(2){
+    margin-bottom:5px;
+    font-size:0.75rem;
+    position: absolute;
+    bottom:0;
+    left:-50%;
+  }
+
+  .user-status{
+    background: #141D2F;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    padding:10px 0;
+    width:305px;
+    height:75px;
+    border-radius:10px;
+    position: absolute;
+    left:-55%;
+    transition:width 350ms ease-in-out;
+  }
+
+  .user-status>div>p{
+    font-size:0.75rem;
+  }
+
+  .stat-cont{
+    min-height:110px;
+    width:270px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    position: absolute;
+    bottom: 0%;
+    left:-55%;
+    transition:width 350ms ease-in-out;
+  }
+
+  .stat-item-cont{
+    display: flex;
+    align-items: center;
+    width:100%;
+    transition:width 350ms ease-in-out;
+  }
+
+  .stat-item-cont p{
+    font-size:0.75rem;
+  }
+}
